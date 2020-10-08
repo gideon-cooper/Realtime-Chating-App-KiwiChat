@@ -15,6 +15,6 @@ Aim:
 Stretch goals:
 
 - Allow multiple users.
-- ~~Make customised warning pop up if nothing has been typed in the initial input boxes~~ Instead disabled the button if no there has been no input
+- ~~Make customised warning pop up if nothing has been typed in the initial input boxes~~ COMPLETED (Instead of a warning i decided to disable the button until the user has put in some information)
 - Share files in the chat eg Videos, images
 - Emoji functionality
