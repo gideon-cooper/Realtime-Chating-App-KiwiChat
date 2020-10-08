@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import queryString from 'query-string'
 import io from 'socket.io-client'
-
+import Message from './Message'
 let socket
 const Chat = ({ location }) => {
   const [name, setName] = useState('')
@@ -45,6 +45,11 @@ const Chat = ({ location }) => {
   return (
     <div className="container">
       <div className="innerContainer">
+        {messages.map((message, i) => (
+          <div key={i}>
+            <Message message={message} name={name} />
+          </div>
+        ))}
         <input
           type="text"
           value={message}
