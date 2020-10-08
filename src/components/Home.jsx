@@ -17,7 +17,10 @@ const Home = () => {
           placeholder="Enter the room"
           onChange={(e) => setRoom(e.target.value)}
         />
-        <Link to={`/chat?name=${name}&room=${room}`}>
+        <Link
+          onClick={(e) => (!name || !room ? e.preventDefault() : null)}
+          to={`/chat?name=${name}&room=${room}`}
+        >
           <button type="submit">Join</button>
         </Link>
       </div>
