@@ -1,4 +1,4 @@
-Create a realtime chat app that allows users to join a room and chat with other people.
+Create a realtime chat app that allows users to choose and join a room and chat with other people.
 
 What i will use:
 
@@ -9,7 +9,8 @@ What i will use:
 
 Aim:
 
-- Create application that allows a user to join a room to chat with another person
+- Create application that allows a user to choose and join a room to chat with another person
+- Multiple rooms that users can join
 
 Stretch goals:
 
