@@ -28,7 +28,7 @@ const Chat = ({ location }) => {
 
   useEffect(() => {
     socket.on('message', (message) => {
-      setMessages([...messages, message])
+      setMessages((messages) => [...messages, message])
     })
     socket.on('roomData', ({ users }) => {
       setUsers(users)
@@ -41,6 +41,7 @@ const Chat = ({ location }) => {
       socket.emit('sendMessage', message, () => setMessage(''))
     }
   }
+  console.log(messages)
   console.log(message, messages)
   return (
     <div className="container">
