@@ -13,7 +13,7 @@ const io = socketio(server)
 io.on('connection', (socket) => {
   console.log('Socket connection is working')
 
-  socket.on('join', ({ name, room }) => {
+  socket.on('join', ({ name, room }, cb) => {
     console.log(name, room)
   })
   socket.on('disconnect', () => {
