@@ -9,7 +9,7 @@ What i will use:
 
 Aim:
 
-- Create application that allows a user to sign in and join a room to chat with another person
+- Create application that allows a user to join a room to chat with another person
 
 Stretch goals:
 
