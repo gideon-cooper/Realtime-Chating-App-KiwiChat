@@ -15,3 +15,4 @@ Aim:
 Stretch goals:
 
 - Allow multiple users.
+- Make customised warning pop up if nothing has been typed in the initial input boxes

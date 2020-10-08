@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   const [name, setName] = useState('')
   const [room, setRoom] = useState('')
+
   return (
     <div className="Container">
       <div className="joinContainer">
@@ -17,11 +18,10 @@ const Home = () => {
           placeholder="Enter the room"
           onChange={(e) => setRoom(e.target.value)}
         />
-        <Link
-          onClick={(e) => (!name || !room ? e.preventDefault() : null)}
-          to={`/chat?name=${name}&room=${room}`}
-        >
-          <button type="submit">Join</button>
+        <Link to={`/chat?name=${name}&room=${room}`}>
+          <button disabled={!name || !room} type="submit">
+            Join
+          </button>
         </Link>
       </div>
     </div>
