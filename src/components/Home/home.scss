@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: whitesmoke;
+  height: 100vh;
+}
+.homeContainer {
+  width: 20%;
+}
+.homeTitle {
+  font-size: 2.5em;
+  padding-bottom: 0.5em;
+}
+.homeInput {
+  width: 80%;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border: transparent 0.5px solid;
+  outline: none;
+  &:focus {
+    border-bottom: 0.5px black solid;
+    transition: 0.5s;
+  }
+}
+.homeButton {
+  &:disabled {
+    cursor: default;
+  }
+  width: 80%;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}

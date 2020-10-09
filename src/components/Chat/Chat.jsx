@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import queryString from 'query-string'
 import io from 'socket.io-client'
-import Message from './Message'
+import Message from '../Message/Message'
+import './chat.scss'
 let socket
 const Chat = ({ location }) => {
   const [name, setName] = useState('')
@@ -44,8 +45,8 @@ const Chat = ({ location }) => {
   console.log(messages)
   console.log(message, messages)
   return (
-    <div className="container">
-      <div className="innerContainer">
+    <div className="chatContainer">
+      <div className="innerChatContainer">
         {messages.map((message, i) => (
           <div key={i}>
             <Message message={message} name={name} />

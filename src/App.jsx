@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './main.scss'
-import Home from './components/Home'
-import Chat from './components/Chat'
+import Home from './components/Home/Home'
+import Chat from './components/Chat/Chat'
 const App = () => (
   <Router>
     <Route exact path="/" component={Home} />

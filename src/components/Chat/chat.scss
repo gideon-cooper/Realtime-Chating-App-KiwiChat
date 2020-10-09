@@ -1,0 +1,13 @@
+.chatContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+.innerChatContainer {
+  background-color: white;
+  border-radius: 10px;
+  width: 40%;
+  height: 65%;
+}
