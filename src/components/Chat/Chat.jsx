@@ -47,12 +47,20 @@ const Chat = ({ location }) => {
   return (
     <div className="chatContainer">
       <div className="innerChatContainer">
-        <div className="banner"></div>
-        {messages.map((message, i) => (
-          <div key={i}>
-            <Message message={message} name={name} />
+        <div className="banner">
+          <div className="leftBanner">
+            <h2>{room}</h2>
           </div>
-        ))}
+          <div className="rightBanner"></div>
+        </div>
+        <div className="messageBox">
+          {messages.map((message, i) => (
+            <div key={i}>
+              <Message message={message} name={name} />
+            </div>
+          ))}
+        </div>
+
         <input
           type="text"
           value={message}
