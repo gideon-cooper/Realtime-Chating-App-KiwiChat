@@ -37,6 +37,10 @@ io.on('connection', (socket) => {
     const user = getUser(socket.id)
     console.log(socket.id, 'SOC2')
     io.to(user.room).emit('message', { user: user.name, text: message })
+    io.to(user.room).emit('roomData', {
+      room: user.room,
+      text: getUsersInRoom(user.room),
+    })
     cb()
   })
   socket.on('disconnect', () => {
