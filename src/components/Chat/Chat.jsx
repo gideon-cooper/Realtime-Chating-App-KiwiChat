@@ -60,13 +60,18 @@ const Chat = ({ location }) => {
             </div>
           ))}
         </div>
-
-        <input
-          type="text"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          onKeyPress={(e) => (e.key === 'Enter' ? sendMessage(e) : null)}
-        />
+        <div className="inputContainer">
+          <input
+            type="text"
+            className="chatInput"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            onKeyPress={(e) => (e.key === 'Enter' ? sendMessage(e) : null)}
+          />
+          <button className="sendButton" onClick={(e) => sendMessage(e)}>
+            <i class="fas fa-kiwi-bird" style={{ color: 'whitesmoke' }}></i>
+          </button>
+        </div>
       </div>
     </div>
   )
