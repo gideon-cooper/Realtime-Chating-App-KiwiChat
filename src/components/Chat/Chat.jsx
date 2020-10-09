@@ -47,6 +47,7 @@ const Chat = ({ location }) => {
   return (
     <div className="chatContainer">
       <div className="innerChatContainer">
+        <div className="banner"></div>
         {messages.map((message, i) => (
           <div key={i}>
             <Message message={message} name={name} />

@@ -1,4 +1,5 @@
 import React from 'react'
+import './message.scss'
 
 export default function Message({ message, name }) {
   let currentUser = false
@@ -7,14 +8,24 @@ export default function Message({ message, name }) {
     currentUser = true
   }
   return currentUser ? (
-    <div>
-      {message.text}
-      {name}
+    <div
+      className="messageContainer"
+      style={{ display: 'flex', justifyContent: 'flex-end' }}
+    >
+      <p className="messageUser">{name}</p>
+      <div className="textContainer">
+        <p className="messageText">{message.text}</p>
+      </div>
     </div>
   ) : (
-    <div>
-      {message.text}
-      {message.user}
+    <div
+      className="messageContainer"
+      style={{ display: 'flex', justifyContent: 'flex-start' }}
+    >
+      <div className="textContainer">
+        <p className="messageText">{message.text}</p>
+      </div>
+      <p className="messageUser">{message.user}</p>
     </div>
   )
 }

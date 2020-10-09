@@ -6,6 +6,9 @@
   background-color: whitesmoke;
 }
 .innerChatContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: white;
   border-radius: 10px;
   width: 40%;
