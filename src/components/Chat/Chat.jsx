@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import queryString from 'query-string'
 import io from 'socket.io-client'
 import Message from '../Message/Message'
-import ScrollToBottom from "react-scroll-to-bottom"
+import ScrollToBottom from 'react-scroll-to-bottom'
 import './chat.scss'
 let socket
 const Chat = ({ location }) => {
