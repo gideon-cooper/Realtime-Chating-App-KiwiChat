@@ -11,6 +11,7 @@ const Home = () => {
         <h1 className="homeTitle">Start chatting</h1>
         <div>
           <input
+            maxLength="10"
             type="text"
             className="homeInput"
             placeholder="Name"
@@ -19,6 +20,7 @@ const Home = () => {
         </div>
         <div>
           <input
+            maxLength="10"
             className="homeInput"
             type="text"
             placeholder="Room Name"

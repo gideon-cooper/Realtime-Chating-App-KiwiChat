@@ -21,8 +21,21 @@
 }
 .banner {
   width: 100%;
-  height: 30px;
+
+  height: 50px;
   background-color: #aaa5a5;
+  color: whitesmoke;
+  .leftBanner {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  i {
+    color: limegreen;
+    font-size: 10px;
+  }
 }
 .inputContainer {
   width: 100%;

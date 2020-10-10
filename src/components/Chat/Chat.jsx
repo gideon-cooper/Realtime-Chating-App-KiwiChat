@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import queryString from 'query-string'
 import io from 'socket.io-client'
 import Message from '../Message/Message'
+import ScrollToBottom from "react-scroll-to-bottom"
 import './chat.scss'
 let socket
 const Chat = ({ location }) => {
@@ -51,7 +52,6 @@ const Chat = ({ location }) => {
           <div className="leftBanner">
             <h2>{room}</h2>
           </div>
-          <div className="rightBanner"></div>
         </div>
         <div className="messageBox">
           {messages.map((message, i) => (
@@ -64,6 +64,7 @@ const Chat = ({ location }) => {
           <input
             type="text"
             className="chatInput"
+            placeholder="Type here"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyPress={(e) => (e.key === 'Enter' ? sendMessage(e) : null)}

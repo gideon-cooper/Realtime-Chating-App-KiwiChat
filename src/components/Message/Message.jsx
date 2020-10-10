@@ -3,8 +3,8 @@ import './message.scss'
 
 export default function Message({ message, name }) {
   let currentUser = false
-
-  if (message.user === name) {
+  let lowerName = name.toLowerCase()
+  if (message.user === lowerName) {
     currentUser = true
   }
   return currentUser ? (
