@@ -27,10 +27,7 @@ io.on('connection', (socket) => {
       user: 'admin',
       text: `${user.name}, has joined the room!`,
     })
-    io.to(user.room).emit('roomData', {
-      room: user.room,
-      users: getUsersInRoom(user.room),
-    })
+
     cb()
   })
   socket.on('sendMessage', (message, cb) => {
@@ -46,10 +43,6 @@ io.on('connection', (socket) => {
       io.to(user.room).emit('message', {
         user: 'admin',
         text: `${user.name} has left the room.`,
-      })
-      io.to(user.room).emit('roomData', {
-        room: user.room,
-        users: getUsersInRoom(user.room),
       })
     }
   })
